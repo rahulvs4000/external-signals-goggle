@@ -21,36 +21,6 @@ $discard,site=wikihow.com
 
 $discard,site=u.today
 
-! ELIMINATE CONTENT FARMS & GARBAGE
-$discard,site:motleyfool.com
-$discard,site:fool.com
-$discard,site:pinterest.com
-$discard,site:reddit.com
-$discard,site:quora.com
-$discard,site:buzzfeed.com
-$discard,site:upworthy.com
-$discard,site:listverse.com
-$discard,site:scribd.com
-$discard,site:slideshare.net
-
-! ELIMINATE JOB SPAM
-$discard,site:indeed.com
-$discard,site:ziprecruiter.com
-$discard,site:monster.com
-$discard,site:careerbuilder.com
-$discard,site:glassdoor.com
-
-! ELIMINATE CLICKBAIT & SPAM
-$discard,*clickbait*
-$discard,*listicle*
-$discard,*affiliate*
-$discard,*coupon*
-$discard,*best deals*
-$discard,*tricks*
-$discard,*sponsored content*
-$discard,*ad*
-$discard,*advertisement*
-
 
 
 
@@ -132,6 +102,35 @@ site:npr.org$boost=4
 ! PROFESSIONAL NETWORKS
 site:linkedin.com$boost=2
 
+! ELIMINATE CONTENT FARMS & GARBAGE
+site:motleyfool.com$discard
+site:fool.com$discard
+site:pinterest.com$discard
+site:reddit.com$downrank=3
+site:quora.com$downrank=3
+site:buzzfeed.com$discard
+site:upworthy.com$discard
+site:listverse.com$discard
+site:scribd.com$downrank=2
+site:slideshare.net$downrank=2
+
+! ELIMINATE JOB SPAM
+site:indeed.com$discard
+site:ziprecruiter.com$discard
+site:monster.com$discard
+site:careerbuilder.com$discard
+site:glassdoor.com$discard
+
+! ELIMINATE CLICKBAIT & SPAM
+*clickbait*$discard
+*listicle*$discard
+*affiliate*$discard
+*coupon*$discard
+*best deals*$discard
+*tricks*$discard
+*sponsored content*$downrank=4
+*ad*$downrank=2
+*advertisement*$downrank=2
 
 ! GOVERNMENT WEBSITES
 site:10086.cn$boost=5
